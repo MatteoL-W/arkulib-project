@@ -1,0 +1,3 @@
+[submodule "arkulib"]
+	path = arkulib
+	url = https://github.com/MatteoL-W/arkulib
