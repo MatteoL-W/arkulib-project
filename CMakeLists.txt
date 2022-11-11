@@ -2,13 +2,14 @@
 cmake_minimum_required(VERSION 3.11)
 project(arkulib_project)
 
-# Create executable
+# Create arkulib_project
 set(TARGET_NAME ${PROJECT_NAME})
 add_executable(${TARGET_NAME})
 
-# Adding arkulib cmake
-add_subdirectory(arkulib INTERFACE)
-include_directories(${CMAKE_SOURCE_DIR}/arkulib/include) # important : other projects called by this cmake will know this include directory
+# Link arkulib_project to ARKULIB
+add_subdirectory(arkulib)
+include_directories(${CMAKE_SOURCE_DIR}/arkulib/include)
+target_link_libraries(${TARGET_NAME} PRIVATE arkulib)
 
 # Get source files
 file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS "src/*")
