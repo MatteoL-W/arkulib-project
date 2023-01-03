@@ -30,8 +30,8 @@ void demoERational() {
                  " ease the code but it could be very easily done using the same system as in Rational.hpp." << std::endl;
 
     std::cout << r0 << " + " << r1 << " = " << (operations = r0 + r1) << std::endl;
-    std::cout << operations << " * " << r2 << " = " << (operations = operations * r1) << std::endl;
-    std::cout << operations << " / " << r3 << " = " << (operations = operations / r3) << std::endl;
+    std::cout << "(" << operations << ") * (" << r2 << ") = " << (operations = operations * r2) << std::endl;
+    std::cout << "(" << operations << ") / (" << r3 << ") = " << (operations = operations / r3) << std::endl;
     std::cout << operations << " - " << r3 << " = " << (operations = operations - r3) << std::endl;
 
     std::cout << std::endl << std::endl << "---- Basic method : ----" << std::endl << std::endl;
@@ -43,7 +43,7 @@ void demoERational() {
     std::cout << r4 << ".isNegative() == " << (r4.isNegative() ? "true" : "false") << std::endl;
     std::cout << r4 << ".isZero() == " << (r4.isZero() ? "true" : "false") << std::endl << std::endl;
 
-    Arkulib::Rational r8(-1,2);
+    Arkulib::ERational r8(-1,2);
     std::cout << r8 << ".isInteger() == " << (r8.isInteger() ? "true" : "false") << std::endl;
     std::cout << r8 << ".isNegative() == " << (r8.isNegative() ? "true" : "false") << std::endl;
     std::cout << r8 << ".isZero() == " << (r8.isZero() ? "true" : "false") << std::endl;
